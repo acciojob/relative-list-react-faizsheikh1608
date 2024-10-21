@@ -1,31 +1,23 @@
 import React from "react";
 
 const data = [
-  {
-    id: 1,
-    name: "abc",
-  },
-  {
-    id: 2,
-    name: "xyz",
-  },
-  {
-    id: 3,
-    name: "faiz",
-  },
+  { id: 1, name: "abc" },
+  { id: 2, name: "abc" },
+  { id: 3, name: "abc" },
+  { id: 4, name: "abc" },
 ];
 
 const App = () => {
   return (
     <div id="main">
-      <ol key={"relativeList"}>
-        {data.map((curr) => {
+      <ol id="relativeList" key={"relativeList"}>
+        {data.map((item) => {
           return (
             <li
               id={`relativeListItem${item.id}`}
               key={`relativeListItem${item.id}`}
             >
-              {curr.name}
+              {item.name}
             </li>
           );
         })}
