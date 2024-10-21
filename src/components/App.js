@@ -20,7 +20,14 @@ const App = () => {
     <div id="main">
       <ol key={"relativeList"}>
         {data.map((curr) => {
-          return <li key={curr.id}>{curr.name}</li>;
+          return (
+            <li
+              id={`relativeListItem${item.id}`}
+              key={`relativeListItem${item.id}`}
+            >
+              {curr.name}
+            </li>
+          );
         })}
       </ol>
     </div>
